@@ -101,12 +101,14 @@ export default function ContactPage() {
     },
   ]
 
+  const mapLocationUrl = "https://www.google.com/maps/place/%D8%AD%D8%B6%D8%A7%D9%86%D8%A9+%D8%A7%D8%AC%D9%8A%D8%A7%D9%84/@31.2643713,29.9965549,17z/data=!3m1!4b1!4m6!3m5!1s0x14f5daa23e29ae39:0xf4491ec1cb7aa461!8m2!3d31.2643713!4d29.9965549!16s%2Fg%2F11j1hyxczc!18m1!1e1?entry=ttu"
+
   const branches = [
     {
       name: "Main Branch",
       address,
       phone,
-      mapUrl: "https://maps.google.com/?q=Cairo,Egypt",
+      mapUrl: mapLocationUrl,
     },
   ]
 
@@ -341,10 +343,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="h-96 bg-[#e0e7ff]">
+      {/* Map - حضانة اجيال / your location */}
+      <section className="relative h-96 bg-[#e0e7ff]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.76715825499!2d31.18805185!3d30.0594882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Egypt!5e0!3m2!1sen!2sus!4v1234567890"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3419.2!2d29.9965549!3d31.2643713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5daa23e29ae39%3A0xf4491ec1cb7aa461!2s!5e0!3m2!1sen!2seg"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -353,6 +355,17 @@ export default function ContactPage() {
           referrerPolicy="no-referrer-when-downgrade"
           title="newBeginning Location Map"
         />
+        <div className="absolute bottom-4 right-4 z-10">
+          <a
+            href={mapLocationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#0a0a5c] px-4 py-2 text-sm font-medium text-white shadow-lg hover:bg-[#0a0a5c]/90"
+          >
+            <MapPin className="h-4 w-4" />
+            Open in Google Maps
+          </a>
+        </div>
       </section>
 
       <Footer />

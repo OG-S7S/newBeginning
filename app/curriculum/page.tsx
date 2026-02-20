@@ -327,17 +327,23 @@ export default function CurriculumPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-4 gap-6 mb-16">
             {curriculumData.map((track) => (
-              <Card key={track.id} className="border-2 border-[#e0e7ff] hover:border-[#3abafb]/50 transition-colors">
-                <CardHeader>
-                  <div className={`w-12 h-12 ${track.color} rounded-xl flex items-center justify-center mb-3`}>
-                    <track.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <CardTitle className="text-[#0a0a5c]">{track.title}</CardTitle>
-                  <CardDescription className={track.textColor}>
-                    {track.ages} • {track.totalModules} Modules
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <a
+                key={track.id}
+                href={`#${track.id}`}
+                className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3abafb] focus-visible:ring-offset-2 rounded-xl"
+              >
+                <Card className="border-2 border-[#e0e7ff] hover:border-[#3abafb]/50 transition-colors cursor-pointer h-full">
+                  <CardHeader>
+                    <div className={`w-12 h-12 ${track.color} rounded-xl flex items-center justify-center mb-3`}>
+                      <track.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <CardTitle className="text-[#0a0a5c]">{track.title}</CardTitle>
+                    <CardDescription className={track.textColor}>
+                      {track.ages} • {track.totalModules} Modules
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </a>
             ))}
           </div>
 

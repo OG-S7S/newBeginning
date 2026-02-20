@@ -41,22 +41,28 @@ const milestones = [
 
 const team = [
   {
-    name: "Eng. Ahmed Mohamed",
-    role: "Founder & Lead Instructor",
-    bio: "Software engineer with 10+ years of experience. Passionate about STEM education.",
+    name: "Eng Mazen",
+    role: "Senior Robotics Instructor",
+    bio: "Experienced robotics engineer passionate about teaching the next generation of innovators.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
   },
   {
-    name: "Eng. Sara Hassan",
-    role: "Curriculum Developer",
-    bio: "Robotics engineer and educator. Designs our age-appropriate learning paths.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
+    name: "Eng Hussein",
+    role: "Senior Software Instructor",
+    bio: "Software engineer dedicated to building future developers through hands-on learning.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
   },
   {
-    name: "Eng. Omar Khaled",
-    role: "Senior Instructor",
-    bio: "Mechatronics specialist. Competition coach and mentor.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+    name: "Eng Seif",
+    role: "Senior Software Instructor",
+    bio: "Expert software developer inspiring young minds to code and create innovative solutions.",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
+  },
+  {
+    name: "Hams",
+    role: "Robotics Instructor",
+    bio: "Robotics educator focused on making technology accessible and fun for young learners.",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
   },
 ]
 
@@ -250,7 +256,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {team.map((member) => (
               <Card key={member.name} className="border-0 shadow-lg overflow-hidden">
                 <div className="aspect-square">

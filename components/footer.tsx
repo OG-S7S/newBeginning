@@ -53,8 +53,8 @@ export function Footer() {
     fetchSettings()
   }, [])
 
-  const academyName = settings?.academy_name?.value || "newBeginning"
-  const tagline = settings?.tagline?.value || "Start Smart"
+  const academyName = settings?.academy_name?.value ||  "newBeginning"
+  const tagline = settings?.tagline?.value || "Start Smssart"
   const description =
     settings?.description?.value ||
     "Building little engineers through real-world problem solving, critical thinking, and innovation."
@@ -157,7 +157,7 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
               <a
-                href="https://facebook.com/NewBegin"
+                href="https://www.facebook.com/share/1CxHEixek5/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-[#3abafb] rounded-full flex items-center justify-center transition-colors"
@@ -166,7 +166,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com/NewBegin"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-[#3abafb] rounded-full flex items-center justify-center transition-colors"

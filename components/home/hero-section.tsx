@@ -23,7 +23,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="max-w-xl">
+          <div className="max-w-xl ml-8 md:ml-12 lg:ml-16">
             <div className="inline-block bg-[#0a0a5c] text-[#3abafb] px-4 py-2 rounded-full text-sm font-semibold mb-6">
               1 FREE TRIAL SESSION
             </div>

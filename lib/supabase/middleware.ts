@@ -6,8 +6,8 @@ export async function updateSession(request: NextRequest) {
     request,
   })
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_URL ?? '').trim()
+  const supabaseAnonKey = (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '').trim()
 
   if (!supabaseUrl || !supabaseAnonKey) {
     console.error('Missing Supabase environment variables:', {
@@ -15,6 +15,13 @@ export async function updateSession(request: NextRequest) {
       key: supabaseAnonKey ? 'set' : 'missing'
     })
     return supabaseResponse
+  }
+
+  if (process.env.NODE_ENV !== 'production') {
+    // Log the exact value Next.js sees for easier debugging
+    // (use JSON.stringify so we can spot invisible characters)
+    // eslint-disable-next-line no-console
+    console.log('[Supabase][middleware] URL from env:', JSON.stringify(supabaseUrl))
   }
 
   const supabase = createServerClient(
